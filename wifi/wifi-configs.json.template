@@ -1,0 +1,7 @@
+// put this file in the root dir
+[
+    {
+        "ssid": "SSID",
+        "password": "Password"
+    }
+]
