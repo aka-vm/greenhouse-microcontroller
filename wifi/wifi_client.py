@@ -4,7 +4,6 @@ from machine import Pin, SPI
 import network
 import time
 import json
-import gc
 
 def load_configs():
     with open('wifi-configs.json') as f:
@@ -41,11 +40,9 @@ def connect():
 
     print("No WiFi connection available")
 
-    gc.collect()
     return False
 
 def disconnect():
     sta_if = network.WLAN(network.STA_IF)
     sta_if.disconnect()
     sta_if.active(False)
-    gc.collect()
