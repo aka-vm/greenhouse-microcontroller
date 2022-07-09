@@ -34,7 +34,6 @@ def connect():
         if is_connected:
             print('Connected to {}'.format(ssid))
 
-            gc.collect()
             return True
         print('Failed to connect to {}'.format(ssid))
 
